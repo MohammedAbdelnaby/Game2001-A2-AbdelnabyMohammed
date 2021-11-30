@@ -14,13 +14,6 @@ protected:
 public:
 	LinkedList()
 	{
-		//Node<T>* test = new Node<T>;
-		//Node<T>* next = new Node<T>;
-		//test->SetData(a);
-		//next->SetData(4);
-		//Root = new Node<T>;
-		//Root = test;
-		//Root->SetNext(next);
 		Root = new Node<T>;
 		Last = new Node<T>;
 		Root = nullptr;

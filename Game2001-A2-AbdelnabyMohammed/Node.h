@@ -32,18 +32,8 @@ public:
 	{
 		Next = node;
 	}
-
-	Node* GetPrev()
-	{
-		return Prev;
-	}
-	void SetPrev(Node* node)
-	{
-		Prev = node;
-	}
 private:
 	int Priority;
 	T Data;
 	Node* Next = nullptr;
-	Node* Prev = nullptr;
 };

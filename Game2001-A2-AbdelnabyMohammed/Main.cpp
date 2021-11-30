@@ -12,9 +12,9 @@ int main()
 	test.Push(1, 1);
 	test.Push(102, 3);
 	test.Push(103, 4);
-	for (int i = 1; i < test.GetSize(); i++)
+	for (int i = 0; i < test.GetSize(); i++)
 	{
 		cout << "YES" << endl;
-		cout << test[i]->GetData() << endl;
+		cout << test[i]->GetPriority() << endl;
 	}
 }

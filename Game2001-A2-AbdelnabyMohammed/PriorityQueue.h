@@ -15,22 +15,6 @@ public:
 
 	void Push(T NewData, int priority)
 	{
-		//Node<T>* NewNode = new Node<T>;
-		//assert(NewNode != nullptr);
-		//NewNode->SetData(NewData);
-		//NewNode->SetPriority(priority);
-		//if (List->GetLast() != nullptr)
-		//{
-		//	List->GetLast()->SetNext(NewNode);
-		//	List->SetLast(NewNode);
-		//}
-		//else
-		//{
-		//	List->SetRoot(NewNode);
-		//	List->SetLast(NewNode);
-		//}
-		//List->SetSize(List->GetSize() + 1);
-
 		Node<T>* NewNode = new Node<T>;
 		assert(NewNode != nullptr);
 		NewNode->SetData(NewData);
@@ -47,7 +31,6 @@ public:
 						temp = this->Root;
 						this->Root = NewNode;
 						this->Root->SetNext(temp);
-						break;
 					}
 					else
 					{
@@ -56,9 +39,6 @@ public:
 					this->size++;
 					return;
 				}
-				//else if (i < this->size)
-				//{
-				//}
 			}
 			PlaceRight(this->operator[](this->size - 1), NewNode);
 		}
