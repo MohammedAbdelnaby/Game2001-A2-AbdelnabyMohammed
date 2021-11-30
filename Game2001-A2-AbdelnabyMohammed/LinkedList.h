@@ -12,7 +12,7 @@ protected:
 	Node<T>* Root;
 	Node<T>* Last;
 public:
-	LinkedList(int a = 3)
+	LinkedList()
 	{
 		//Node<T>* test = new Node<T>;
 		//Node<T>* next = new Node<T>;
@@ -61,14 +61,24 @@ public:
 	}
 	Node<T>* operator[](int index)
 	{
+		if (index < 0)
+		{
+			cout << "ERROR INDEX OUT OF BOUNDS" << endl;
+			system("pause");
+		}
 		Node<T>* pointer = new Node<T>;
 		pointer = this->Front();
 
 		for (int i = 0; i < index; i++)
 		{
+
 			pointer = pointer->GetNext();
 		}
 		return pointer;
+	}
+	void operator=(Node<T>* node)
+	{
+
 	}
 	int GetSize()
 	{
@@ -81,5 +91,13 @@ public:
 	void SetRoot(Node<T>* node)
 	{
 		Root = node;
+	}
+	Node<T>* GetLast()
+	{
+		return Last;
+	}
+	void SetLast(Node<T>* node)
+	{
+		Last = node;
 	}
 };
