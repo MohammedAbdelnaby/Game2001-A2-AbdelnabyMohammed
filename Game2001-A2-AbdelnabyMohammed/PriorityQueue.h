@@ -49,13 +49,14 @@ public:
 		}
 		this->size++;
 	}
-
+private:
 	void PlaceRight(Node<T>* node, Node<T>* rightNode)
 	{
 		Node<T>* nextnode = new Node<T>;
 		nextnode = node->GetNext();
 		node->SetNext(rightNode);
 		rightNode->SetNext(nextnode);
+		this->Last = rightNode;
 	}
 
 	void PlaceLeft(Node<T>* node, Node<T>* leftNode)

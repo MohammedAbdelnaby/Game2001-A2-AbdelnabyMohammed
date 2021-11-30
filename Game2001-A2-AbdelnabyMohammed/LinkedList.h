@@ -52,12 +52,20 @@ public:
 			}
 		}
 	}
+	int GetSize()
+	{
+		return size;
+	}
+	Node<T>* GetLast()
+	{
+		return Last;
+	}
 	Node<T>* operator[](int index)
 	{
 		if (index < 0)
 		{
 			cout << "ERROR INDEX OUT OF BOUNDS" << endl;
-			system("pause");
+			system("exit");
 		}
 		Node<T>* pointer = new Node<T>;
 		pointer = this->Front();
@@ -69,26 +77,7 @@ public:
 		}
 		return pointer;
 	}
-	void operator=(Node<T>* node)
-	{
-
-	}
-	int GetSize()
-	{
-		return size;
-	}
-	void SetSize(int x)
-	{
-		size = x;
-	}
-	void SetRoot(Node<T>* node)
-	{
-		Root = node;
-	}
-	Node<T>* GetLast()
-	{
-		return Last;
-	}
+protected:
 	void SetLast(Node<T>* node)
 	{
 		Last = node;
